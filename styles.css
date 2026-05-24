@@ -1,0 +1,67 @@
+/* ================================================================
+   ConciergeGh — Landing page custom styles
+   ----------------------------------------------------------------
+   Tailwind handles utility classes (loaded via CDN in index.html).
+   This file contains:
+     • Global page setup (smooth scroll, base font)
+     • Custom backgrounds that don't fit Tailwind utilities
+   ================================================================ */
+
+/* Smooth scrolling for anchor nav */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Use Inter as the default body font */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Hero background — soft green radial glows over a light tint */
+.gradient-bg {
+  background:
+    radial-gradient(1200px 600px at 90% -10%, rgba(46, 162, 95, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(31, 131, 74, 0.15), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f0fbf3 100%);
+}
+
+/* Subtle grid lines overlay used in the hero */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(31, 131, 74, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 131, 74, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ----------------------------------------------------------------
+   Pricing section toggle button states
+   Driven by data-active="true" / "false"
+   ---------------------------------------------------------------- */
+
+/* Billing cycle toggle (Monthly / Annual) */
+.billing-btn[data-active="true"] {
+  background-color: #ffffff;
+  color: rgb(15 23 42);          /* slate-900 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.billing-btn[data-active="false"] {
+  background-color: transparent;
+  color: rgb(100 116 139);       /* slate-500 */
+}
+.billing-btn[data-active="false"]:hover {
+  color: rgb(15 23 42);
+}
+
+/* Per-card variant toggle (Basic / Plus) */
+.variant-btn[data-active="true"] {
+  background-color: #ffffff;
+  color: rgb(15 23 42);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.variant-btn[data-active="false"] {
+  background-color: transparent;
+  color: rgb(100 116 139);
+}
+.variant-btn[data-active="false"]:hover {
+  color: rgb(15 23 42);
+}

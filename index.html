@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConciergeGh — Property Management, Built for Ghana</title>
+  <meta name="description" content="ConciergeGh builds a modern property management system for property owners in Ghana — multi-property support, rent tracking, tenant records, financial reporting, maintenance logging, a tenant portal, and a full audit trail. Request a demo." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0fbf3',
+              100: '#dcf6e3',
+              200: '#bbecca',
+              300: '#8bdaa6',
+              400: '#54c07d',
+              500: '#2ea25f',
+              600: '#1f834a',
+              700: '#1a683d',
+              800: '#175334',
+              900: '#13442c',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles (gradients, base font, page-level rules) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- ============== NAV ============== -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-slate-200/70">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="inline-flex w-9 h-9 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm">
+          <!-- Building icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01"/><path d="M9 13h.01"/><path d="M9 17h.01"/><path d="M15 9h.01"/><path d="M15 13h.01"/><path d="M15 17h.01"/></svg>
+        </span>
+        <div class="leading-tight">
+          <div class="font-bold text-slate-900">ConciergeGh</div>
+          <div class="text-[11px] uppercase tracking-wider text-slate-500">Property Management</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#features" class="hover:text-brand-700">Features</a>
+        <a href="#modules" class="hover:text-brand-700">Modules</a>
+        <a href="#pricing" class="hover:text-brand-700">Pricing</a>
+        <a href="#projects" class="hover:text-brand-700">Projects</a>
+        <a href="#contact" class="hover:text-brand-700">Contact</a>
+      </nav>
+
+      <a href="#contact" class="inline-flex items-center gap-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 shadow-sm transition">
+        Request a demo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section id="top" class="relative gradient-bg overflow-hidden">
+    <div class="absolute inset-0 grid-pattern opacity-50 pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-20 sm:pb-28">
+
+      <div class="inline-flex items-center gap-2 rounded-full bg-white border border-brand-200 px-3 py-1 text-xs font-medium text-brand-700 shadow-sm">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+        Built for property owners in Ghana
+      </div>
+
+      <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 max-w-3xl">
+        Rent collection, tenant records, and accountability —
+        <span class="text-brand-600">all in one place.</span>
+      </h1>
+
+      <p class="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+        ConciergeGh is a modern property management system for family-owned rental portfolios. Track every cedi, log every action, and know exactly who did what — across apartments and flats, from any device.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="inline-flex justify-center items-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-base font-semibold px-6 py-3 shadow-sm transition">
+          Request a demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#features" class="inline-flex justify-center items-center gap-2 rounded-lg bg-white border border-slate-300 hover:border-brand-400 hover:text-brand-700 text-slate-700 text-base font-semibold px-6 py-3 transition">
+          See what's inside
+        </a>
+      </div>
+
+      <!-- Stat strip -->
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
+        <div class="rounded-xl bg-white border border-slate-200 p-4">
+          <div class="text-2xl font-bold text-brand-700">GH₵</div>
+          <div class="text-xs text-slate-500 mt-1">Native cedi currency</div>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-4">
+          <div class="text-2xl font-bold text-brand-700">MoMo</div>
+          <div class="text-xs text-slate-500 mt-1">Mobile Money + Cash</div>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-4">
+          <div class="text-2xl font-bold text-brand-700">100%</div>
+          <div class="text-xs text-slate-500 mt-1">Action audit trail</div>
+        </div>
+        <div class="rounded-xl bg-white border border-slate-200 p-4">
+          <div class="text-2xl font-bold text-brand-700">Auto</div>
+          <div class="text-xs text-slate-500 mt-1">Payment reminders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WHY / FEATURES ============== -->
+  <section id="features" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Why ConciergeGh</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">A single system for the whole portfolio.</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Replace paper, spreadsheets, and memory with one digital system that the whole family can use — securely, with full accountability.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Feature card -->
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Status at a glance</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Dashboard shows rent collected, overdue totals, units due this week, and occupancy — in one screen.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Automated reminders</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">SMS and WhatsApp reminders go out 3 days before rent is due, on the due date, and after overdue — automatically.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-12V5l8-3 8 3v5c0 7.5-8 12-8 12z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Full audit trail</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Every payment, tenant edit, and maintenance update is permanently recorded with the user's name and timestamp.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Role-based access</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Manager, Co-manager, and Owner roles — each person gets exactly the permissions they need, no more.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Mobile-first</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Record payments and log maintenance from anywhere on your phone — fully responsive down to 375px screens.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-slate-900">Monthly & yearly reports</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Income, expenses, and net position auto-generated every month — plus full annual breakdowns by unit, property, and category.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MODULES ============== -->
+  <section id="modules" class="py-20 sm:py-28 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Seven modules. One app.</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Everything you need to run a portfolio.</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed max-w-2xl">From a single building to a portfolio spread across cities — ConciergeGh handles one property or many from the same dashboard.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-5">
+        <!-- Module 1 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">1</span>
+            <h3 class="font-bold text-lg text-slate-900">Dashboard</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">At-a-glance health: rent collected this month, overdue totals, units due this week, occupancy rate, and the last five actions across the team.</p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">2</span>
+            <h3 class="font-bold text-lg text-slate-900">Rent Tracker</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">Every unit, every month — with Paid / Due / Overdue badges. Record a payment (Cash or MoMo) in two taps. Tap any row for full history.</p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">3</span>
+            <h3 class="font-bold text-lg text-slate-900">Tenant Records</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">A directory of every tenant — name, unit, phone, rent, lease dates, status. Vacant units shown clearly. Every edit logged.</p>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">4</span>
+            <h3 class="font-bold text-lg text-slate-900">Income & Expense Ledger</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">Full financial log with categories, month/year filters, and one-click CSV export. Payments auto-flow into income.</p>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">5</span>
+            <h3 class="font-bold text-lg text-slate-900">Maintenance Log</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">Log a repair request against any unit with priority (Low / Medium / High), track status to resolution, and see who marked it done.</p>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">6</span>
+            <h3 class="font-bold text-lg text-slate-900">Multi-Property Management</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">Manage multiple separate properties from one account — apartments in Accra, flats in Kumasi, family homes in Tema. Filter any view by property or see them all together.</p>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="rounded-2xl bg-gradient-to-br from-brand-50 to-white border border-brand-200 p-6 sm:p-7 md:col-span-2">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 rounded-md bg-brand-600 text-white items-center justify-center text-sm font-bold">7</span>
+            <h3 class="font-bold text-lg text-slate-900">Tenant Portal</h3>
+            <span class="ml-auto inline-flex items-center gap-1 rounded-full bg-brand-600 text-white text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5">For tenants</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">A dedicated login for your tenants — so they're part of the system, not chasing you on WhatsApp.</p>
+          <div class="mt-5 grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-brand-600 text-white items-center justify-center flex-shrink-0">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-slate-700"><strong class="text-slate-900">Report issues</strong> — submit maintenance requests with photos, straight from their phone</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-brand-600 text-white items-center justify-center flex-shrink-0">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-slate-700"><strong class="text-slate-900">Digitally sign tenancy agreements</strong> — no printing, scanning, or hand-delivery</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-brand-600 text-white items-center justify-center flex-shrink-0">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-slate-700"><strong class="text-slate-900">View payment history</strong> — every cedi they've paid, with receipts on demand</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-brand-600 text-white items-center justify-center flex-shrink-0">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-slate-700"><strong class="text-slate-900">Rent reminders & receipts</strong> — automatic notifications and downloadable proof of payment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PRICING ============== -->
+  <section id="pricing" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+      <!-- Header -->
+      <div class="text-center max-w-2xl mx-auto">
+        <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Pricing</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Plans that scale with your portfolio.</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">From a single rental to a full estate — pick the plan that fits your size today, and move up when you're ready. Annual billing saves up to GH₵2,400.</p>
+      </div>
+
+      <!-- Billing cycle toggle -->
+      <div class="mt-10 flex justify-center">
+        <div class="inline-flex items-center rounded-xl bg-slate-100 p-1">
+          <button id="bill-monthly" type="button" class="billing-btn px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold transition" data-active="true">
+            Monthly
+          </button>
+          <button id="bill-annual" type="button" class="billing-btn px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold transition inline-flex items-center gap-2" data-active="false">
+            Annual
+            <span class="inline-flex items-center rounded-full bg-brand-100 text-brand-700 text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5">Save</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing grid -->
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+
+        <!-- ===== FREE ===== -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7 flex flex-col">
+          <h3 class="text-lg font-bold text-slate-900">Free</h3>
+          <p class="mt-1.5 text-sm text-slate-500 min-h-[2.5rem]">For individual owners with one or two units.</p>
+
+          <div class="mt-5">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-slate-900">GH₵0</span>
+              <span class="text-sm text-slate-500 font-medium">forever</span>
+            </div>
+            <div class="mt-1 text-xs text-slate-500">No credit card required</div>
+          </div>
+
+          <a href="#contact" class="mt-6 inline-flex justify-center rounded-lg border border-slate-300 hover:border-brand-400 hover:text-brand-700 text-slate-700 text-sm font-semibold px-4 py-2.5 transition">
+            Get started
+          </a>
+
+          <div class="mt-6 pt-6 border-t border-slate-100 flex-1">
+            <div class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Includes</div>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Up to <strong class="text-slate-900">2 units</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Basic tenant management</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Rent due reminders</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Simple dashboard</span>
+              </li>
+            </ul>
+
+            <div class="font-semibold text-slate-900 text-xs uppercase tracking-wider mt-6 mb-3 pt-5 border-t border-slate-100">Not included</div>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-slate-300 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <span class="text-slate-500">Tenant portal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-slate-300 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <span class="text-slate-500">Exportable reports & ledgers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-slate-300 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <span class="text-slate-500">SMS/Email notifications</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ===== STARTER (Most Popular) ===== -->
+        <div class="relative rounded-2xl bg-white border-2 border-brand-500 p-6 sm:p-7 flex flex-col shadow-xl shadow-brand-500/10" data-tier="starter">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 rounded-full bg-brand-600 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 shadow-sm whitespace-nowrap">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Most Popular
+          </span>
+          <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+          <p class="mt-1.5 text-sm text-slate-500 min-h-[2.5rem]">For small to medium portfolios.</p>
+
+          <!-- Basic / Plus toggle -->
+          <div class="mt-4 inline-flex rounded-lg bg-slate-100 p-1 text-xs font-semibold self-start">
+            <button type="button" class="variant-btn px-3 py-1.5 rounded-md transition" data-variant-btn="basic" data-active="false">Basic</button>
+            <button type="button" class="variant-btn px-3 py-1.5 rounded-md transition" data-variant-btn="plus" data-active="true">Plus</button>
+          </div>
+
+          <!-- Prices: variant × billing -->
+          <div class="mt-5 hidden" data-variant="basic" data-billing="monthly">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵99</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-slate-500">Billed monthly</div>
+          </div>
+          <div class="mt-5 hidden" data-variant="basic" data-billing="annual">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵79</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-brand-700 font-semibold">GH₵948/year · Save GH₵240</div>
+          </div>
+          <div class="mt-5" data-variant="plus" data-billing="monthly">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵120</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-slate-500">Billed monthly</div>
+          </div>
+          <div class="mt-5 hidden" data-variant="plus" data-billing="annual">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵99</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-brand-700 font-semibold">GH₵1,188/year · Save GH₵252</div>
+          </div>
+
+          <a href="#contact" class="mt-6 inline-flex justify-center rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2.5 transition">
+            Request a demo
+          </a>
+
+          <div class="mt-6 pt-6 border-t border-slate-100 flex-1">
+            <div class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Includes</div>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Up to <strong class="text-slate-900">15 units</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Tenant portal access</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Rent reminders</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Exportable reports & ledgers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Multi-signatory support</span>
+              </li>
+
+              <!-- SMS quota (varies) -->
+              <li class="flex items-start gap-2 hidden" data-variant="basic" data-billing="monthly">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">50 SMS</strong>/month included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-variant="basic" data-billing="annual">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">600 SMS</strong>/year included</span>
+              </li>
+              <li class="flex items-start gap-2" data-variant="plus" data-billing="monthly">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">60 SMS</strong>/month included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-variant="plus" data-billing="annual">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">720 SMS</strong>/year included</span>
+              </li>
+
+              <!-- Plus-only -->
+              <li class="flex items-start gap-2" data-variant="plus">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">Advanced</strong> reporting & analytics</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ===== GROWTH ===== -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 sm:p-7 flex flex-col" data-tier="growth">
+          <h3 class="text-lg font-bold text-slate-900">Growth</h3>
+          <p class="mt-1.5 text-sm text-slate-500 min-h-[2.5rem]">For growing managers and estate operators.</p>
+
+          <!-- Basic / Plus toggle -->
+          <div class="mt-4 inline-flex rounded-lg bg-slate-100 p-1 text-xs font-semibold self-start">
+            <button type="button" class="variant-btn px-3 py-1.5 rounded-md transition" data-variant-btn="basic" data-active="true">Basic</button>
+            <button type="button" class="variant-btn px-3 py-1.5 rounded-md transition" data-variant-btn="plus" data-active="false">Plus</button>
+          </div>
+
+          <!-- Prices: variant × billing -->
+          <div class="mt-5" data-variant="basic" data-billing="monthly">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵199</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-slate-500">Billed monthly</div>
+          </div>
+          <div class="mt-5 hidden" data-variant="basic" data-billing="annual">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵179</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-brand-700 font-semibold">GH₵2,148/year · Save GH₵240</div>
+          </div>
+          <div class="mt-5 hidden" data-variant="plus" data-billing="monthly">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵219</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-slate-500">Billed monthly</div>
+          </div>
+          <div class="mt-5 hidden" data-variant="plus" data-billing="annual">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-slate-900">GH₵199</span><span class="text-sm text-slate-500 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-brand-700 font-semibold">GH₵2,388/year · Save GH₵240</div>
+          </div>
+
+          <a href="#contact" class="mt-6 inline-flex justify-center rounded-lg border-2 border-brand-600 text-brand-700 hover:bg-brand-50 text-sm font-semibold px-4 py-2 transition">
+            Request a demo
+          </a>
+
+          <div class="mt-6 pt-6 border-t border-slate-100 flex-1">
+            <div class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Everything in Starter, plus</div>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">15–40 units</strong></span>
+              </li>
+
+              <!-- SMS quota -->
+              <li class="flex items-start gap-2" data-variant="basic" data-billing="monthly">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">100 SMS</strong>/month included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-variant="basic" data-billing="annual">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">1,200 SMS</strong>/year included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-variant="plus" data-billing="monthly">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">120 SMS</strong>/month included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-variant="plus" data-billing="annual">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">1,440 SMS</strong>/year included</span>
+              </li>
+
+              <!-- Plus-only -->
+              <li class="flex items-start gap-2 hidden" data-variant="plus">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700"><strong class="text-slate-900">Advanced</strong> reporting & analytics</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-700">Higher SMS bundles available</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ===== ENTERPRISE ===== -->
+        <div class="rounded-2xl bg-slate-900 text-slate-100 border border-slate-900 p-6 sm:p-7 flex flex-col">
+          <h3 class="text-lg font-bold text-white">Enterprise</h3>
+          <p class="mt-1.5 text-sm text-slate-400 min-h-[2.5rem]">For estate firms and high-volume operators.</p>
+
+          <div class="mt-5" data-billing="monthly">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-white">GH₵999</span><span class="text-sm text-slate-400 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-slate-400">Billed monthly</div>
+          </div>
+          <div class="mt-5 hidden" data-billing="annual">
+            <div class="flex items-baseline gap-1"><span class="text-4xl font-extrabold text-white">GH₵799</span><span class="text-sm text-slate-400 font-medium">/month</span></div>
+            <div class="mt-1 text-xs text-brand-300 font-semibold">GH₵9,588/year · Save GH₵2,400</div>
+          </div>
+
+          <a href="#contact" class="mt-6 inline-flex justify-center rounded-lg bg-white text-slate-900 hover:bg-slate-100 text-sm font-semibold px-4 py-2.5 transition">
+            Talk to sales
+          </a>
+
+          <div class="mt-6 pt-6 border-t border-slate-800 flex-1">
+            <div class="font-semibold text-white text-xs uppercase tracking-wider mb-3">Everything in Growth Plus, plus</div>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200"><strong class="text-white">Unlimited units</strong></span>
+              </li>
+
+              <li class="flex items-start gap-2" data-billing="monthly">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200"><strong class="text-white">300 SMS</strong>/month included</span>
+              </li>
+              <li class="flex items-start gap-2 hidden" data-billing="annual">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200"><strong class="text-white">3,600 SMS</strong>/year included</span>
+              </li>
+
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">Priority onboarding assistance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">24-hour customer support</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">Custom operational support</span>
+              </li>
+
+              <!-- White-label & branding -->
+              <li class="pt-3 mt-3 border-t border-slate-800">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-brand-300">White-label & branding</div>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200"><strong class="text-white">Custom domain</strong> support</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200"><strong class="text-white">White-labeled</strong> tenant portal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">Custom company branding</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">Custom login screen</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-slate-200">Logo on reports and receipts</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== ADD-ONS ===== -->
+      <div class="mt-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Optional add-ons</div>
+          <h3 class="mt-2 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Top up when you need to.</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed">Available on any plan, including Free.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-3 gap-5">
+          <div class="rounded-2xl bg-white border border-slate-200 p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h4 class="mt-4 font-bold text-slate-900">SMS bundles</h4>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Buy extra SMS credits whenever you need them. Used for rent due, overdue, and custom reminders.</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            </div>
+            <h4 class="mt-4 font-bold text-slate-900">Email bundles</h4>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Email notification credits for tenant communications, statements, and digital receipts.</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            </div>
+            <h4 class="mt-4 font-bold text-slate-900">Setup & migration</h4>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">We'll import your tenant data, configure properties, and train your team. One-off fee.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footnote -->
+      <p class="mt-12 text-center text-xs text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        Annual billing locks in discounted pricing, reduces monthly costs, and simplifies yearly budgeting. All prices in Ghana Cedis (GH₵). Need something custom? <a href="#contact" class="text-brand-700 font-semibold hover:underline">Talk to us</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== OTHER PROJECTS / RESTAURANT RECOMMENDER ============== -->
+  <section id="projects" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Other Projects</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Side projects we're building.</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Alongside the property management system, we're working on smaller tools that solve everyday problems for people in Ghana.
+        </p>
+      </div>
+
+      <div class="mt-12 rounded-3xl bg-gradient-to-br from-brand-700 to-brand-500 text-white overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-0">
+
+          <!-- Left: copy -->
+          <div class="p-8 sm:p-12">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/20 px-3 py-1 text-xs font-medium">
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-200"></span>
+              Side project
+            </div>
+            <h3 class="mt-5 text-3xl sm:text-4xl font-extrabold tracking-tight">Restaurant Recommender</h3>
+            <p class="mt-4 text-brand-50/90 leading-relaxed">
+              Tell us your budget and we'll find places to eat that match. No more scrolling endlessly — just a clean shortlist that fits what you're ready to spend.
+            </p>
+
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-white/15 items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span><strong>Budget-first matching</strong> — set your spend in cedis, get restaurants within range</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-white/15 items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span><strong>Cuisine + occasion filters</strong> — date night, lunch break, group dinner</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-white/15 items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span><strong>Local-first</strong> — built around Accra and Ghanaian dining</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 inline-flex w-5 h-5 rounded-full bg-white/15 items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span><strong>Learns your taste</strong> — get sharper picks the more you use it</span>
+              </li>
+            </ul>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#contact" class="inline-flex justify-center items-center gap-2 rounded-lg bg-white text-brand-700 hover:bg-brand-50 text-sm font-semibold px-5 py-2.5 transition">
+                Get early access
+              </a>
+              <span class="inline-flex justify-center items-center gap-2 rounded-lg border border-white/30 text-white/90 text-sm font-medium px-5 py-2.5">
+                In development
+              </span>
+            </div>
+          </div>
+
+          <!-- Right: mock UI -->
+          <div class="relative p-8 sm:p-12 bg-white/5">
+            <div class="rounded-2xl bg-white text-slate-800 shadow-2xl overflow-hidden max-w-sm mx-auto">
+              <div class="p-5 border-b border-slate-100">
+                <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Your budget</div>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-3xl font-extrabold text-slate-900">GH₵ 120</span>
+                  <span class="text-sm text-slate-500">per person</span>
+                </div>
+                <div class="mt-3 h-2 rounded-full bg-slate-100 overflow-hidden">
+                  <div class="h-full w-2/3 bg-brand-500"></div>
+                </div>
+              </div>
+              <div class="p-5 space-y-3">
+                <div class="flex items-center gap-3 p-3 rounded-xl border border-slate-100 hover:bg-slate-50 transition">
+                  <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold">B</div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-slate-900 text-sm">Buka Restaurant</div>
+                    <div class="text-xs text-slate-500">Ghanaian · 5 min away</div>
+                  </div>
+                  <div class="text-sm font-semibold text-brand-700">GH₵ 90</div>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl border border-slate-100 hover:bg-slate-50 transition">
+                  <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold">S</div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-slate-900 text-sm">Santoku</div>
+                    <div class="text-xs text-slate-500">Japanese · 12 min away</div>
+                  </div>
+                  <div class="text-sm font-semibold text-brand-700">GH₵ 115</div>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl border border-slate-100 hover:bg-slate-50 transition">
+                  <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center font-bold">C</div>
+                  <div class="flex-1">
+                    <div class="font-semibold text-slate-900 text-sm">Coco Lounge</div>
+                    <div class="text-xs text-slate-500">Continental · 8 min away</div>
+                  </div>
+                  <div class="text-sm font-semibold text-brand-700">GH₵ 105</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT / DEMO ============== -->
+  <section id="contact" class="py-20 sm:py-28 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+        <!-- Left: copy + contact info -->
+        <div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-700">Get in touch</div>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Request a demo or just say hello.</h2>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Tell us a bit about your portfolio and we'll get back to you within 1–2 business days with a walk-through tailored to your setup.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-slate-900">Email</div>
+                <a href="mailto:info@conciergegh.com" class="text-sm text-slate-600 hover:text-brand-700">info@conciergegh.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-slate-900">Phone / WhatsApp</div>
+                <a href="tel:+233558404897" class="text-sm text-slate-600 hover:text-brand-700">+233 (0)55 840 4897</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-700 flex items-center justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-slate-900">Location</div>
+                <div class="text-sm text-slate-600">Accra, Ghana</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="rounded-2xl bg-white border border-slate-200 shadow-sm p-6 sm:p-8">
+          <!-- Submissions go to Formspree (form ID: xeedlaol) -->
+          <form id="demo-form"
+                action="https://formspree.io/f/xeedlaol"
+                method="POST"
+                class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Your name</label>
+              <input id="name" name="name" type="text" required
+                class="w-full rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none px-3.5 py-2.5 text-sm" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email</label>
+              <input id="email" name="email" type="email" required
+                class="w-full rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none px-3.5 py-2.5 text-sm" />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Phone <span class="text-slate-400 font-normal">(optional)</span></label>
+              <input id="phone" name="phone" type="tel"
+                class="w-full rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none px-3.5 py-2.5 text-sm" />
+            </div>
+
+            <div>
+              <label for="units" class="block text-sm font-semibold text-slate-700 mb-1.5">How many units do you manage?</label>
+              <select id="units" name="units"
+                class="w-full rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none px-3.5 py-2.5 text-sm bg-white">
+                <option>1–5 units</option>
+                <option>6–15 units</option>
+                <option>16–30 units</option>
+                <option>30+ units</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
+              <textarea id="message" name="message" rows="4" required
+                placeholder="Tell us a bit about your portfolio and what you're looking for…"
+                class="w-full rounded-lg border border-slate-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none px-3.5 py-2.5 text-sm"></textarea>
+            </div>
+
+            <!-- Honeypot for spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button type="submit" id="submit-btn"
+              class="w-full inline-flex justify-center items-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-3 transition disabled:opacity-60 disabled:cursor-not-allowed">
+              <span id="submit-label">Request a demo</span>
+              <svg id="submit-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+
+            <p id="form-status" class="text-sm text-center hidden"></p>
+
+            <p class="text-xs text-slate-500 text-center">
+              By submitting, you agree we may contact you about ConciergeGh products.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12">
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5">
+            <span class="inline-flex w-9 h-9 items-center justify-center rounded-lg bg-brand-600 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01"/><path d="M9 13h.01"/><path d="M9 17h.01"/><path d="M15 9h.01"/><path d="M15 13h.01"/><path d="M15 17h.01"/></svg>
+            </span>
+            <div class="font-bold text-white">ConciergeGh</div>
+          </div>
+          <p class="mt-4 text-sm text-slate-400 max-w-sm leading-relaxed">
+            Modern property management for Ghana. Built for property owners who want to know exactly what's happening, when it happened, and who did it — across one property or many.
+          </p>
+        </div>
+
+        <div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-slate-400">Product</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#features" class="hover:text-white">Features</a></li>
+            <li><a href="#modules" class="hover:text-white">Modules</a></li>
+            <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+            <li><a href="#contact" class="hover:text-white">Request demo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-slate-400">Projects</div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#projects" class="hover:text-white">Property Management</a></li>
+            <li><a href="#projects" class="hover:text-white">Restaurant Recommender</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
+        <div>© <span id="year"></span> ConciergeGh. All rights reserved.</div>
+        <div>Made in Accra · GH₵</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // -----------------------------------------------------------
+    // Pricing — billing cycle + per-tier variant toggles
+    // -----------------------------------------------------------
+    const pricingState = {
+      billing: 'monthly',                             // 'monthly' | 'annual'
+      variants: { starter: 'plus', growth: 'basic' }, // Starter defaults to Plus (Most Popular)
+    };
+
+    function renderPricing() {
+      // Update billing button active state
+      document.querySelectorAll('.billing-btn').forEach((btn) => {
+        const target = btn.id === 'bill-monthly' ? 'monthly' : 'annual';
+        btn.dataset.active = (pricingState.billing === target).toString();
+      });
+
+      // Tier cards with a variant toggle (Starter, Growth)
+      document.querySelectorAll('[data-tier]').forEach((card) => {
+        const tier = card.dataset.tier;
+        const variant = pricingState.variants[tier];
+
+        // Update variant button active state
+        card.querySelectorAll('.variant-btn').forEach((btn) => {
+          btn.dataset.active = (btn.dataset.variantBtn === variant).toString();
+        });
+
+        // Show/hide elements based on data-variant + data-billing
+        card.querySelectorAll('[data-variant], [data-billing]').forEach((el) => {
+          const elVariant = el.dataset.variant;
+          const elBilling = el.dataset.billing;
+          const variantOk = !elVariant || elVariant === variant;
+          const billingOk = !elBilling || elBilling === pricingState.billing;
+          el.classList.toggle('hidden', !(variantOk && billingOk));
+        });
+      });
+
+      // Elements outside any tier card that depend on billing only (e.g. Enterprise price)
+      document.querySelectorAll('[data-billing]').forEach((el) => {
+        if (el.closest('[data-tier]')) return; // already handled above
+        el.classList.toggle('hidden', el.dataset.billing !== pricingState.billing);
+      });
+    }
+
+    // Wire up billing toggle buttons
+    document.querySelectorAll('.billing-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        pricingState.billing = btn.id === 'bill-monthly' ? 'monthly' : 'annual';
+        renderPricing();
+      });
+    });
+
+    // Wire up variant toggle buttons
+    document.querySelectorAll('.variant-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tier = btn.closest('[data-tier]').dataset.tier;
+        pricingState.variants[tier] = btn.dataset.variantBtn;
+        renderPricing();
+      });
+    });
+
+    renderPricing();
+
+    // Form submission via Formspree (AJAX so we can show inline success)
+    const form = document.getElementById('demo-form');
+    const status = document.getElementById('form-status');
+    const btn = document.getElementById('submit-btn');
+    const label = document.getElementById('submit-label');
+    const arrow = document.getElementById('submit-arrow');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // If the placeholder hasn't been replaced yet, fail gracefully
+      if (form.action.includes('YOUR_FORM_ID')) {
+        status.className = 'text-sm text-center text-amber-600';
+        status.textContent = 'Form endpoint not configured yet. Replace YOUR_FORM_ID in index.html with your Formspree form ID.';
+        status.classList.remove('hidden');
+        return;
+      }
+
+      btn.disabled = true;
+      label.textContent = 'Sending…';
+      arrow.classList.add('hidden');
+      status.classList.add('hidden');
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.className = 'text-sm text-center text-brand-700 font-medium';
+          status.textContent = 'Thanks! We\'ll be in touch within 1–2 business days.';
+          status.classList.remove('hidden');
+          label.textContent = 'Sent ✓';
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        status.className = 'text-sm text-center text-red-600';
+        status.textContent = 'Something went wrong. Please email us directly at info@conciergegh.com.';
+        status.classList.remove('hidden');
+        label.textContent = 'Try again';
+        arrow.classList.remove('hidden');
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
