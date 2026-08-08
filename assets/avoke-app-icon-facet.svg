@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Avoke app icon, faceted">
+  <rect width="120" height="120" rx="27" fill="#17140F"/>
+  <g transform="translate(60,60) scale(0.66) translate(-60,-60)">
+    <g fill="#F3F1EB">
+      <path d="M60 6 L14 60 L60 114 Z" opacity=".18"/>
+      <path d="M60 6 L80 30 L60 30 Z" opacity=".36"/>
+      <path d="M60 30 L80 30 L60 60 Z" opacity=".9"/>
+      <path d="M60 60 L80 90 L60 90 Z" opacity=".6"/>
+      <path d="M60 90 L80 90 L60 114 Z" opacity=".36"/>
+      <path d="M80 30 L106 60 L80 90 Z" opacity=".48"/>
+    </g>
+    <path d="M60 6 L106 60 L60 114 L14 60 Z" fill="none" stroke="#F3F1EB" stroke-width="3"/>
+    <circle cx="60" cy="60" r="35" fill="none" stroke="#3D62B8" stroke-width="3"/>
+    <path d="M60 60 L92 60" fill="none" stroke="#17140F" stroke-width="3"/>
+  </g>
+</svg>

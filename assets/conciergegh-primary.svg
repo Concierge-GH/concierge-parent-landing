@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 148" width="300" height="148" role="img" aria-label="ConciergeGh primary logo">
+  <g transform="translate(98.4,2) scale(0.86)">
+    <path d="M60 6 L106 60 L60 114 L14 60 Z" fill="none" stroke="#17140F" stroke-width="5"/>
+    <path d="M81.19 40.92 A28.52 28.52 0 1 0 81.19 79.08" fill="none" stroke="#15604A" stroke-width="8"/>
+  </g>
+  <text x="193" y="132" text-anchor="end" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Georgia, serif" font-size="30" fill="#17140F">Concierge</text>
+  <text x="193" y="132" text-anchor="start" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Georgia, serif" font-size="30" fill="#15604A">Gh</text>
+</svg>

@@ -65,3 +65,53 @@ body {
 .variant-btn[data-active="false"]:hover {
   color: rgb(15 23 42);
 }
+
+/* ================================================================
+   Dark theme overrides
+   Tailwind handles most colors via dark: variants (darkMode: 'class').
+   These cover custom backgrounds and JS-driven states above.
+   ================================================================ */
+
+/* Hero background in dark mode — deep green glows over near-black */
+.dark .gradient-bg {
+  background:
+    radial-gradient(1200px 600px at 90% -10%, rgba(46, 162, 95, 0.16), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(31, 131, 74, 0.14), transparent 60%),
+    linear-gradient(180deg, #020617 0%, #0b1f16 100%);
+}
+
+/* Grid overlay a touch brighter so it stays visible on dark */
+.dark .grid-pattern {
+  background-image:
+    linear-gradient(rgba(84, 192, 125, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(84, 192, 125, 0.08) 1px, transparent 1px);
+}
+
+/* Pricing toggles — active pill on a dark track */
+.dark .billing-btn[data-active="true"],
+.dark .variant-btn[data-active="true"] {
+  background-color: rgb(51 65 85);   /* slate-700 */
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.dark .billing-btn[data-active="false"],
+.dark .variant-btn[data-active="false"] {
+  color: rgb(148 163 184);           /* slate-400 */
+}
+.dark .billing-btn[data-active="false"]:hover,
+.dark .variant-btn[data-active="false"]:hover {
+  color: #ffffff;
+}
+
+/* Form fields readable on dark surfaces */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: rgb(30 41 59);   /* slate-800 */
+  color: rgb(226 232 240);           /* slate-200 */
+  border-color: rgb(51 65 85);       /* slate-700 */
+}
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgb(100 116 139);           /* slate-500 */
+}
