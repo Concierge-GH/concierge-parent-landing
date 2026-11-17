@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./index.html'],
+  content: ['./index.html', './careers/**/*.html'],
   theme: {
     extend: {
       colors: {
@@ -17,6 +17,7 @@ module.exports = {
           800: '#175334',
           900: '#13442c',
         },
+        gold: '#F4B43C',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
